@@ -1,4 +1,4 @@
-#Install
+# Install
 
 Clone this repository to any `path` on your machine and them add this to your shell init file (e.g. `.zshrc`, `.bashrc`):
 
