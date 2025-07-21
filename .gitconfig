@@ -1,6 +1,12 @@
 [user]
-        email = aryglins@gmail.com.br
-        name = Ary G. Lins
+        email = user@email
+        name = User Name
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[core]
+	fsmonitor = true
+	untrackedCache = true
+#Git alias
 [alias]
         # View abbreviated SHA, description, and history graph of the latest 20 commits
         l = log --pretty=oneline -n 20 --graph --abbrev-commit
@@ -144,3 +150,10 @@
         pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
         insteadOf = "gist:"
+[credential]
+	helper = osxkeychain
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
